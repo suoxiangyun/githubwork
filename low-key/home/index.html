@@ -1,8 +1,33 @@
-<html>
-   <head>
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <title>影视首页</title>
+</head>
+<body>
+<button type="button"  onclick="testForAjax()" value="test">test</button>
+</body>
+<script src="../common/js/jquery.js"></script>
+<script>
+    function testForAjax() {
+        var msg = '';
+        for (var j = 0; j < 2; j++) {
+            ajaxMsg(msg, function (jdata) {
+                msg = msg.concat(JSON.stringify(jdata));
+            });
+            alert(" --- >< " + msg)
+        }
 
-   </head>
-   <body>
-       <div>Hello World</div>
-   </body>
-</html>
+        function ajaxMsg(msg, CallBack) {
+            $.ajax({
+                type: "GET",
+                url: "http://unified-admin.tvmore.com.cn/moretvBackend/login2",
+                async: false,
+                data: [],
+                success: CallBack,
+                error: function (e) {
+                    CallBack("return error");
+
+                }
+            });
+        }
+    }
+</script>
