@@ -1,0 +1,96 @@
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <title>Insert title here</title>
+    <link href="../common/css/index.css"/>
+</head>
+<body onload="testForAjax();">
+    <div class="box-content clearfix">
+        <div id="app" class='cardcontent'  style='width: 100%'>
+
+        </div>
+    </div>
+</body>
+<script src="../common/js/jquery.js"></script>
+<script>
+    function testForAjax() {
+        var msg = '';
+        for (var j = 0; j < 2; j++) {
+            ajaxMsg(msg, function (jdata) {
+                console.info("data === " + jdata);
+                asses(jdata.data);
+            });
+        }
+
+    }
+
+    function asses(data){
+        var divObj = $("#app");
+        data.list.forEach((value, key, map) =>{
+
+            var html ='<div class="el-card__body">' +
+                '<div class="imgfloatcontent">'+
+                    '<img src="'+value.imageUrl+'" class="thumbimg">'+
+                    '<div class="imgfloatdiv">'+
+                    '<div style="width: 100%; text-align: left;">'
+                       '<a href="" target="_blank" style="margin-left: 10px; font-size: 10px;">By admin</a>'+
+                       '<a href="https://www.jianshu.com/u/d3ad6687e61f" target="_blank" style="font-size: 14px;">/ From grain先森</a></div>'+
+                    '<div class="authorpart"></div>'+
+                       '<a href="https://leach-chen.github.io/storedata1/favorite/?id=vue_4" target="_blank" class="itemdetail" style="text-align: left;">Vue PC和移动端组件库合集</a>'+
+                    '</div>'+
+                '</div>'+
+            '</div>';
+            console.info(value.name + " === jdata === " +value.playUrl +" === " + value.payMarkUrl);
+//            var html = "<div class='imgfloatcontent-view_H' scroll-x='true'  style='width: 100%'>" +
+//                " <a href='"+value.playUrl+"' title='"+value.name+"' target='_blank'>" +
+//                   " <img class='thumbimg' src='"+value.imageUrl+"'/>" +
+//                "</a>" +
+//                "</div>";
+            divObj.append(html);
+        });
+    }
+    function ajaxMsg(msg, CallBack) {
+        $.ajax({
+            type : "GET",
+            dataType:"text/plain",
+            url : "http://pcw-api.iqiyi.com/search/video/videolists?access_play_control_platform=14&channel_id=1&data_type=1&from=pcw_list&is_album_finished=&is_purchase=2&key=&market_release_date_level=&mode=11&pageNum=1&pageSize=48&site=iqiyi&source_type=&three_category_id=&without_qipu=1",
+            async : false,
+            data : [],
+            success : CallBack,
+            error : function(e) {
+                CallBack("return error");
+
+            }
+        });
+    }
+</script>
+<!--docId: "4fd7efc9dfbc38c0f25d6f5f9ec926cd",-->
+<!--tvId: "1716776500",-->
+<!--channelId: 1,-->
+<!--description: "英国黑衣人总部王牌探员H与新晋探员M在阻止外星团伙入侵的过程中意外铲除了隐藏在黑衣人组织中的内奸，成功拯救世界 。各种脑洞大开的外星人和颠覆想象的高科技装备轮番登场，热血沸腾惊心动魄的动作追车场面层出不穷，完美构建出全新的黑衣人宇宙观。",-->
+<!--name: "黑衣人：全球追缉",-->
+<!--playUrl: "http://www.iqiyi.com/v_19rqtdg0uw.html",-->
+<!--issueTime: 1565883013000,-->
+<!--payMark: 3,-->
+<!--payMarkUrl: "http://pic2.iqiyipic.com/common/20171106/bc/1b/vip_100002_v_601.png",-->
+<!--imageUrl: "http://pic0.iqiyipic.com/image/20190815/48/d1/v_122792505_m_601_m13.jpg",-->
+<!--duration: "01:55:12",-->
+<!--videoCount: 1,-->
+<!--latestOrder: 1,-->
+<!--categories: [-->
+<!--{-->
+<!--name: "动作"-->
+<!--},-->
+<!--{-->
+<!--name: "科幻"-->
+<!--}-->
+<!--],-->
+<!--exclusive: false,-->
+<!--qiyiProduced: false,-->
+<!--focus: "雷神爆锤外星人",-->
+<!--is1080p: true,-->
+<!--cast: {},-->
+<!--score: 7.6,-->
+<!--formatPeriod: "2019-06-14",-->
+<!--secondInfo: "主演:克里斯·海姆斯沃斯 / 泰莎·汤普森",-->
+<!--siteId: "iqiyi",-->
+<!--videoInfoType: "video"-->

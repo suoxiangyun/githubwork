@@ -1,33 +1,37 @@
 <head>
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
     <title>影视首页</title>
+    <link href="../common/css/index.css"/>
 </head>
 <body>
-<button type="button"  onclick="testForAjax()" value="test">test</button>
+<div class="g-row">
+    <div class="g-col">
+        <div class="g-box">
+            <div class="pack_yk_pack_v" type="vertical">
+                <div class="pack_pack_cover">
+                    <a data-scm="20140719.manual.5295.show_5690a3e071de4dbbb9d1" data-spm="d_1" data-name="a_pos" href="//v.youku.com/v_nextstage/id_5690a3e071de4dbbb9d1.html?spm=a2ha1.12523948.m_5295_c_12649.d_1&amp;s=5690a3e071de4dbbb9d1&amp;scm=20140719.manual.5295.show_5690a3e071de4dbbb9d1" target="_blank" title="加油，你是最棒的" data-aplus-ae="x16_148d7fde" data-spm-anchor-id="a2ha1.12523948.m_5295_c_12649.d_1" data-aplus-clk="x43_1ca4a8fc"><img src="//r1.ykimg.com/050E00005D400B631B76918E7201FEB6?x-oss-process=image/resize,w_290/interlace,1/quality,Q_80/sharpen,100" data-spm-anchor-id="a2ha1.12523948.d_1.i0" />
+                        <div class="pack_bg"></div>
+                        <span class="pack_p_lt"></span>
+                        <span class="pack_p_rt">
+			<span class="pack_pack_tag pack_tag_red">首播</span>
+			</span><span class="pack_p_rb"><span>更新至33集</span>
+			</span>
+                    </a>
+                </div>
+                <div class="pack_info_list">
+                    <div class="pack_title  pack_short_title">
+                        <a data-scm="20140719.manual.5295.show_5690a3e071de4dbbb9d1" data-spm="d_1" data-name="" href="//v.youku.com/v_nextstage/id_5690a3e071de4dbbb9d1.html?s=5690a3e071de4dbbb9d1&amp;scm=20140719.manual.5295.show_5690a3e071de4dbbb9d1" target="_blank" title="加油，你是最棒的" data-spm-anchor-id="a2ha1.12523948.m_5295_c_12649.d_1" data-aplus-clk="x44_1ca4a8fc">加油，你是最棒的</a>
+                    </div>
+                    <div class="pack_subtitle">
+                        邓伦马思纯甜怼恋
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
 </body>
 <script src="../common/js/jquery.js"></script>
 <script>
-    function testForAjax() {
-        var msg = '';
-        for (var j = 0; j < 2; j++) {
-            ajaxMsg(msg, function (jdata) {
-                msg = msg.concat(JSON.stringify(jdata));
-            });
-            alert(" --- >< " + msg)
-        }
-
-        function ajaxMsg(msg, CallBack) {
-            $.ajax({
-                type: "GET",
-                url: "http://unified-admin.tvmore.com.cn/moretvBackend/login2",
-                async: false,
-                data: [],
-                success: CallBack,
-                error: function (e) {
-                    CallBack("return error");
-
-                }
-            });
-        }
-    }
 </script>
+

@@ -1,0 +1,15 @@
+//影片列表接口
+[
+  {
+    "_id": "qq_cartoon_movies_url",
+    "listUrl": "https://list.video.qq.com/fcgi-bin/list_common_cgi?otype=json\u0026novalue=1\u0026platform=5\u0026version=20304\u0026intfname=vip_cartoon_h5\u0026tid=573\u0026uappkey=d2a6457eb8ae927a\u0026uappid=20001172\u0026type=3\u0026sourcetype=1\u0026sort=18\u0026cartoon_type=-1\u0026cartoon_focus=-1\u0026_=1565182047728\u0026callback=qq_cartoon_movies_url\u0026pagesize=30\u0026offset=0"
+  },
+  {
+    "_id": "qq_film_movies_url",
+    "listUrl": "https://list.video.qq.com/fcgi-bin/list_common_cgi?otype=json\u0026novalue=1\u0026platform=1\u0026version=10000\u0026intfname=web_vip_movie_new\u0026tid=687\u0026appkey=c8094537f5337021\u0026appid=200010596\u0026type=1\u0026sourcetype=1\u0026itype=-1\u0026iyear=-1\u0026iarea=-1\u0026iawards=-1\u0026sort=19\u0026callback=qq_film_movies_url\u0026_=1557911716208\u0026pagesize=30\u0026offset=0"
+  },
+  {
+    "_id": "qq_tv_movies_url",
+    "listUrl": "https://list.video.qq.com/fcgi-bin/list_common_cgi?otype=json\u0026novalue=1\u0026platform=1\u0026version=10000\u0026intfname=web_vip_tv_new\u0026tid=687\u0026appkey=c8094537f5337021\u0026appid=200010596\u0026type=2\u0026sourcetype=1\u0026iarea=-1\u0026itype=-1\u0026iyear=-1\u0026sort=18\u0026callback=qq_tv_movies_url\u0026_=1557911716208\u0026pagesize=30\u0026offset=0"
+  }
+]
